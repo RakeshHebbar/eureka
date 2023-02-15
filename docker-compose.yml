@@ -1,0 +1,40 @@
+version: '3.2'
+
+services:
+  postgres:
+    image: postgres
+    restart: always
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: eureka
+      POSTGRES_PASSWORD: eureka
+      POSTGRES_DB: eureka
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./db-data/:/var/lib/postgresql/data/
+
+  authentication:
+    build: authentication
+    restart: always
+    ports:
+      - '8080:8080'
+    depends_on:
+      - postgres
+
+  geolocation:
+    build: geolocation
+    restart: always
+
+  events:
+    build: events
+    restart: always
+    depends_on:
+      - postgres
+
+  event-suggestion:
+    build: event-suggestion
+    restart: always
+    depends_on:
+      - postgres
+      - events

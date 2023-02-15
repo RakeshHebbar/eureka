@@ -1,0 +1,23 @@
+server:
+  port: '8087'
+spring:
+  application:
+    name: event-suggestion
+  datasource:
+    url: 'jdbc:postgresql://localhost:5432/eurekadev'
+    username: eureka
+    password: eureka
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+
+geo:
+  api: 'http://localhost:8085'
+events:
+  api: 'http://localhost:8086'

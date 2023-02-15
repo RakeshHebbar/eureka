@@ -1,0 +1,10 @@
+com/eureka/eventsuggestion/config/EventSuggestionConfig.class
+com/eureka/eventsuggestion/EventSuggestionApplication.class
+com/eureka/eventsuggestion/service/PopularEventsServiceImpl.class
+com/eureka/eventsuggestion/dto/PostRequest.class
+com/eureka/eventsuggestion/dao/PopularEventsDao.class
+com/eureka/eventsuggestion/service/PopularEventsServiceImpl$1.class
+com/eureka/eventsuggestion/controller/EventSuggestionController.class
+com/eureka/eventsuggestion/config/HibernateConfig.class
+com/eureka/eventsuggestion/dto/LatLong.class
+com/eureka/eventsuggestion/service/PopularEventsService.class

@@ -1,0 +1,35 @@
+server:
+  port: '8080'
+spring:
+  application:
+    name: authentication
+  datasource:
+    url: 'jdbc:postgresql://localhost:5432/eurekadev'
+    username: eureka
+    password: eureka
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+jwt:
+  secret: $ecretP@ss
+
+#Zuul routes.
+zuul:
+  routes:
+    geo:
+      url: 'http://localhost:8085'
+    events:
+      url: 'http://localhost:8086'
+    event-suggestion:
+      url: 'http://localhost:8087'
+
+# Disable ribbon
+ribbon:
+  eureka:
+    enabled: false
