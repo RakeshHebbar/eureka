@@ -1,12 +1,3 @@
-# Team Name: Eureka
-
-## Members:
-
-<b> Rakesh Hebbar Amsady (22200106) <br>
-Parth Parmar (22200205) <br>
-Suraj Shivshankar (22200049) <br>
-Abhishek Dutta (22200052) </b>
-
 ## Summary of code:
 
 The application consists of <b>4 services</b> each being an independent spring boot micro-service.
